@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "esnext",
+    "useDefineForClassFields": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "lib": ["esnext", "dom"],
+    "allowJs": true, //允许有js
+    "allowSyntheticDefaultImports": true, //允许引用没有默认导出的模块
+    "outDir": "./",  //将输出结构重定向到目录
+    "paths": {
+      "~/*": ["src/*"],
+    },
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*.js","src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/main.ts", "src/main.ts"]
+}

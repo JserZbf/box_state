@@ -1,0 +1,106 @@
+<template>
+  <div class="item2">
+    <h3>设备生产节拍统计</h3>
+    <echarts></echarts>
+  </div>
+</template>
+
+<script setup>
+// import echarts from "./echarts2";
+import { defineComponent, onMounted, inject, ref } from "vue"; // 主要
+import echarts from "./echarts2.vue";
+// props
+const props = defineProps({
+  color: {
+    type: String,
+    default: "#000",
+  },
+  color2: {
+    type: String,
+    default: "#000",
+  },
+});
+const compList = ref({
+  echarts
+});
+// const ipt2 = ref('')
+// export default {
+//   name: "item1",
+//   components: { echarts },
+//   props: {
+//     id: {
+//       type: String,
+//       default() {
+//         return "";
+//       },
+//     },
+//   },
+//   data() {
+//     return {
+//       status: "",
+//     };
+//   },
+//   watch: {},
+//   mounted() {},
+//   methods: {},
+// };
+</script>
+
+<style lang="scss" scoped>
+.item2 {
+  position: relative;
+  width: calc(100% - 50px);
+  height: calc(50% - 130px - 16px);
+  padding: 15px 20px;
+  display: flex;
+  margin-top: 20px;
+  background: #fff;
+  border-radius: 16px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-content: flex-start;
+  position: relative;
+
+  h3 {
+    font-size: 16px;
+    font-family: MiSans-Bold;
+    font-weight: 600;
+    color: #333333;
+    position: absolute;
+  }
+
+  .info1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: flex-start;
+    font-size: 14px;
+    line-height: 30px;
+
+    p {
+      color: #999999;
+    }
+
+    span {
+      color: #333333;
+    }
+
+    .info1s {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-content: flex-start;
+    }
+  }
+
+  .mr30 {
+    margin-right: 30px;
+  }
+}
+</style>
